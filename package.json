@@ -8,7 +8,9 @@
     "clean": "pnpm --filter @rowan287630/zhui clean",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "docs:dev": "pnpm --filter docs dev",
+    "docs:build": "pnpm --filter docs build"
   },
   "repository": {
     "type": "git",

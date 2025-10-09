@@ -1,0 +1,19 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "dependencies": {
+    "@rowan287630/zhui": "workspace:*"
+  },
+  "devDependencies": {
+    "core-js": "^2.6.12",
+    "element-ui": "2.15.14",
+    "vue": "2.6.14",
+    "vue-server-renderer": "2.6.14",
+    "vuepress": "^1.9.10"
+  }
+}
