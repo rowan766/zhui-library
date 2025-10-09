@@ -5,7 +5,10 @@
   "description": "基于 element-ui 封装的 vue2 组件库",
   "scripts": {
     "build": "pnpm --filter @rowan287630/zhui build",
-    "clean": "pnpm --filter @rowan287630/zhui clean"
+    "clean": "pnpm --filter @rowan287630/zhui clean",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,7 @@
   },
   "homepage": "https://github.com/rowan766/zhui-library#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.29.7",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.2",
     "element-ui": "2.15.14",

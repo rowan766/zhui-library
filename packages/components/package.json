@@ -1,6 +1,6 @@
 {
   "name": "@rowan287630/zhui",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "基于 Element UI 的 Vue 2 组件库",
   "main": "lib/index.js",
   "module": "es/index.js",
