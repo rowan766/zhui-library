@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhui 组件测试</title>
+  <!-- 使用 jsdelivr CDN（国内更快）-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.14/lib/theme-chalk/index.css">
+  <style>
+    body {
+      padding: 20px;
+      font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    }
+    h1 {
+      color: #409EFF;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #303133;
+      border-bottom: 1px solid #EBEEF5;
+      padding-bottom: 10px;
+    }
+    .demo-block {
+      margin: 20px 0;
+    }
+    .my-button {
+      margin: 0 10px 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>🎉 Zhui 组件库测试</h1>
+    
+    <h2>MyButton - 基础用法</h2>
+    <div class="demo-block">
+      <my-button>默认按钮</my-button>
+      <my-button type="primary">主要按钮</my-button>
+      <my-button type="success">成功按钮</my-button>
+      <my-button type="info">信息按钮</my-button>
+      <my-button type="warning">警告按钮</my-button>
+      <my-button type="danger">危险按钮</my-button>
+    </div>
+    
+    <h2>MyButton - 不同尺寸</h2>
+    <div class="demo-block">
+      <my-button size="medium">中等按钮</my-button>
+      <my-button size="small">小型按钮</my-button>
+      <my-button size="mini">迷你按钮</my-button>
+    </div>
+
+    <h2>MyButton - 圆角和圆形</h2>
+    <div class="demo-block">
+      <my-button round>圆角按钮</my-button>
+      <my-button type="primary" round>主要按钮</my-button>
+      <my-button type="success" circle icon="el-icon-check"></my-button>
+      <my-button type="danger" circle icon="el-icon-delete"></my-button>
+    </div>
+
+    <h2>MyButton - 禁用状态</h2>
+    <div class="demo-block">
+      <my-button disabled>禁用按钮</my-button>
+      <my-button type="primary" disabled>主要按钮</my-button>
+    </div>
+
+    <h2>MyButton - 加载状态</h2>
+    <div class="demo-block">
+      <my-button loading>加载中</my-button>
+      <my-button type="primary" loading>加载中</my-button>
+    </div>
+  </div>
+
+  <!-- Vue 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <!-- Element UI -->
+  <script src="https://cdn.jsdelivr.net/npm/element-ui@2.15.14/lib/index.js"></script>
+  <!-- Zhui 组件库 -->
+  <script src="../../packages/components/dist/index.js"></script>
+
+  <script>
+    console.log('Vue:', typeof Vue)
+    console.log('ELEMENT:', typeof ELEMENT)
+    console.log('Zhui:', typeof Zhui)
+    
+    // 使用组件
+    Vue.use(ELEMENT)
+    Vue.use(Zhui)
+
+    new Vue({
+      el: '#app'
+    })
+  </script>
+</body>
+</html>

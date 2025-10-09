@@ -1,0 +1,42 @@
+{
+  "name": "@rowan287630/zhui",
+  "version": "0.0.1",
+  "description": "基于 Element UI 的 Vue 2 组件库",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rm -rf es lib dist"
+  },
+  "keywords": [
+    "vue",
+    "vue2",
+    "element-ui",
+    "components",
+    "zhui"
+  ],
+  "author": "rowan287630",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rowan766/zhui-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rowan766/zhui-library/issues"
+  },
+  "homepage": "https://github.com/rowan766/zhui-library#readme",
+  "peerDependencies": {
+    "vue": "^2.6.14",
+    "element-ui": "^2.15.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
