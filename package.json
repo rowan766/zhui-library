@@ -27,6 +27,7 @@
     "@changesets/cli": "^2.29.7",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.2",
+    "echarts": "^6.0.0",
     "element-ui": "2.15.14",
     "rollup": "^2.79.2",
     "rollup-plugin-postcss": "^4.0.2",

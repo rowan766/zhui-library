@@ -3,7 +3,8 @@
     "allow": [
       "Bash(pnpm install:*)",
       "Bash(pnpm docs:dev:*)",
-      "Bash(pnpm:*)"
+      "Bash(pnpm:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": [],
     "ask": []

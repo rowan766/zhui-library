@@ -34,7 +34,13 @@
   "homepage": "https://github.com/rowan766/zhui-library#readme",
   "peerDependencies": {
     "vue": "^2.6.14",
-    "element-ui": "^2.15.0"
+    "element-ui": "^2.15.0",
+    "echarts": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "echarts": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "access": "public"

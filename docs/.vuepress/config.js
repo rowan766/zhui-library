@@ -10,7 +10,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/' },
-      { text: '组件', link: '/components/button' },
+      { text: '组件', link: '/components/form' },
       { text: 'GitHub', link: 'https://github.com/rowan766/zhui-library' },
       { text: 'npm', link: 'https://www.npmjs.com/package/@rowan287630/zhui' }
     ],
@@ -32,7 +32,47 @@ module.exports = {
           title: '基础组件',
           collapsable: false,
           children: [
-            'button'
+            'form',
+            'table',
+            'dialog',
+            'search-form',
+            'descriptions',
+            'card',
+            'page-header'
+          ]
+        },
+        {
+          title: '数据展示',
+          collapsable: false,
+          children: [
+            'chart',
+            'image-preview',
+            'empty'
+          ]
+        },
+        {
+          title: '表单组件',
+          collapsable: false,
+          children: [
+            'upload',
+            'steps'
+          ]
+        },
+        {
+          title: '工具方法',
+          collapsable: false,
+          children: [
+            'validate',
+            'format',
+            'storage',
+            'request'
+          ]
+        },
+        {
+          title: '其他',
+          collapsable: false,
+          children: [
+            'permission'
           ]
         }
       ]
