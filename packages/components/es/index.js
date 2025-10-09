@@ -6609,11 +6609,37 @@ class Storage {
   }
 }
 
+// 检查是否在浏览器环境
+const isBrowser = typeof window !== 'undefined';
+
+// 创建一个空的 Storage 实现（用于 SSR）
+class MockStorage {
+  constructor() {
+    this.store = {};
+  }
+  getItem(key) {
+    return this.store[key] || null
+  }
+  setItem(key, value) {
+    this.store[key] = value;
+  }
+  removeItem(key) {
+    delete this.store[key];
+  }
+  clear() {
+    this.store = {};
+  }
+}
+
 // localStorage 实例
-const local = new Storage(window.localStorage);
+const local = isBrowser
+  ? new Storage(window.localStorage)
+  : new Storage(new MockStorage());
 
 // sessionStorage 实例
-const session = new Storage(window.sessionStorage);
+const session = isBrowser
+  ? new Storage(window.sessionStorage)
+  : new Storage(new MockStorage());
 
 /**
  * 创建自定义前缀的存储实例
@@ -6622,6 +6648,9 @@ const session = new Storage(window.sessionStorage);
  * @returns {Storage} 存储实例
  */
 function createStorage(prefix, useSession = false) {
+  if (!isBrowser) {
+    return new Storage(new MockStorage(), prefix)
+  }
   const storage = useSession ? window.sessionStorage : window.localStorage;
   return new Storage(storage, prefix)
 }
