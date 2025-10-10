@@ -41,6 +41,9 @@ importers:
       vue-template-compiler:
         specifier: 2.6.14
         version: 2.6.14
+      vuepress-plugin-demo-container:
+        specifier: ^0.2.0
+        version: 0.2.0
 
   docs:
     dependencies:
@@ -63,9 +66,15 @@ importers:
       vuepress:
         specifier: ^1.9.10
         version: 1.9.10(@vue/compiler-sfc@3.5.22)(hogan.js@3.0.2)(lodash@4.17.21)(pug@3.0.3)
+      vuepress-plugin-demo-container:
+        specifier: ^0.2.0
+        version: 0.2.0
 
   packages/components:
     dependencies:
+      echarts:
+        specifier: '>=5.0.0'
+        version: 6.0.0
       element-ui:
         specifier: ^2.15.0
         version: 2.15.14(vue@2.7.16)
@@ -5710,6 +5719,9 @@ packages:
 
   vuepress-plugin-container@2.1.5:
     resolution: {integrity: sha512-TQrDX/v+WHOihj3jpilVnjXu9RcTm6m8tzljNJwYhxnJUW0WWQ0hFLcDTqTBwgKIFdEiSxVOmYE+bJX/sq46MA==}
+
+  vuepress-plugin-demo-container@0.2.0:
+    resolution: {integrity: sha512-IXWZUc9+mErxjhBMRvhjHkGlXC3aXLS8wRV4kh4RZYAOVtb8nLv2fmpzwrSZrnIOXLGMcMTObdFruVzX9kBylw==}
 
   vuepress-plugin-smooth-scroll@0.0.3:
     resolution: {integrity: sha512-qsQkDftLVFLe8BiviIHaLV0Ea38YLZKKonDGsNQy1IE0wllFpFIEldWD8frWZtDFdx6b/O3KDMgVQ0qp5NjJCg==}
@@ -12817,6 +12829,8 @@ snapshots:
       markdown-it-container: 2.0.0
     transitivePeerDependencies:
       - supports-color
+
+  vuepress-plugin-demo-container@0.2.0: {}
 
   vuepress-plugin-smooth-scroll@0.0.3:
     dependencies:

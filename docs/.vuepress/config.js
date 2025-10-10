@@ -1,8 +1,13 @@
 module.exports = {
   title: 'Zhui 组件库',
   description: '基于 Element UI 的 Vue 2 组件库',
-  base: '/zhui-library/',
-  
+  base: '/zhui-library/',  // zhui-library docs
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
+
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
@@ -91,5 +96,30 @@ module.exports = {
   
   markdown: {
     lineNumbers: true
-  }
+  },
+
+  plugins: [
+    ['demo-container', {
+      locales: [
+        {
+          "lang": "zh-CN",
+          "demo-block": {
+            "hide-text": "隐藏代码",
+            "show-text": "显示代码",
+            "copy-text": "复制代码",
+            "copy-success": "复制成功"
+          }
+        },
+        {
+          "lang": "en-US",
+          "demo-block": {
+            "hide-text": "Hide",
+            "show-text": "Expand",
+            "copy-text": "Copy",
+            "copy-success": "Successful"
+          }
+        }
+      ]
+    }]
+  ]
 }
