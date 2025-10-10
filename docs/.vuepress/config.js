@@ -9,7 +9,12 @@ module.exports = {
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['script', {}, `
+      if (typeof window !== 'undefined') {
+        window.global = window;
+      }
+    `]
   ],
   
   themeConfig: {
@@ -121,5 +126,15 @@ module.exports = {
         }
       ]
     }]
-  ]
+  ],
+
+  chainWebpack: (config) => {
+    // 为 echarts 添加 polyfill
+    config.node.set('global', true)
+
+    config.plugin('provide').use(require('webpack').ProvidePlugin, [{
+      Buffer: ['buffer', 'Buffer'],
+      process: 'process/browser'
+    }])
+  }
 }

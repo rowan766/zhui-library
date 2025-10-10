@@ -7,7 +7,9 @@
       "Bash(mkdir:*)",
       "Bash(test:*)",
       "Bash(del demo-block.vue)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\ndocs: 添加 echarts 支持和必要的 polyfill 配置\n\n- 在 VuePress 配置中添加 global polyfill 和 webpack 配置\n- 在 enhanceApp.js 中引入并全局挂载 echarts\n- 添加 buffer 和 process polyfill 依赖以支持 echarts\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
