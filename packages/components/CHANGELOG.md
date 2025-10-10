@@ -1,5 +1,11 @@
 # @rowan287630/zhui
 
+## 0.2.1
+
+### Patch Changes
+
+- 添加文档 Logo 图片，修复首页图标显示
+
 ## 0.2.0
 
 ### Minor Changes
