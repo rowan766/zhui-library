@@ -278,12 +278,13 @@ export default {
         {
           label: '薪资',
           prop: 'salary',
-          formatter: (data) => `¥${data.salary.toLocaleString()}`
+          formatter: (data) => data.salary ? `¥${data.salary.toLocaleString()}` : '-'
         },
         {
           label: '入职日期',
           prop: 'entryDate',
           formatter: (data) => {
+            if (!data.entryDate) return '-'
             const date = new Date(data.entryDate)
             return date.toLocaleDateString('zh-CN')
           }
@@ -296,7 +297,7 @@ export default {
         {
           label: '绩效分数',
           prop: 'performance',
-          formatter: (data) => `${(data.performance * 100).toFixed(0)}%`
+          formatter: (data) => data.performance !== undefined ? `${(data.performance * 100).toFixed(0)}%` : '-'
         }
       ]
     }
